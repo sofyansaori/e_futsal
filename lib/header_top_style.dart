@@ -20,7 +20,7 @@ class HeaderTop extends StatelessWidget {
               ),
               // height: size.height * 0.2 - 29,
               decoration: const BoxDecoration(
-                color: Color(0xff7CB342),
+                color: Color(0xFF7CB342),
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(36),
                   bottomRight: Radius.circular(36),
