@@ -3,7 +3,6 @@ import 'package:e_futsal/login.dart';
 import 'package:flutter/material.dart';
 
 class Booking extends StatefulWidget {
-  const Booking({Key? key}) : super(key: key);
 
   @override
   State<Booking> createState() => _BookState();
