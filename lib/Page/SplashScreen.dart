@@ -1,6 +1,6 @@
 import 'dart:async';
-import 'package:e_futsal/home.dart';
-import 'package:e_futsal/login.dart';
+import 'package:e_futsal/Page/Home.dart';
+import 'package:e_futsal/Page/Login.dart';
 import 'package:e_futsal/main.dart';
 import 'package:flutter/material.dart';
 
@@ -31,8 +31,8 @@ class _splashScreenPageState extends State<SplashScreen> {
       body: Center(
         child: Image.asset(
           'assets/images/football.png',
-          width: 200,
-          height: 200,
+          width: 150,
+          height: 150,
         ),
       ),
     );

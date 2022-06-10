@@ -1,17 +1,17 @@
-import 'package:e_futsal/header_top_style.dart';
-import 'package:e_futsal/home.dart';
-import 'package:e_futsal/user_profile.dart';
+import 'package:e_futsal/Page/EditUserProfile.dart';
+import 'package:e_futsal/Widget/Header_Top.dart';
+import 'package:e_futsal/Page/Home.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class EditProfile extends StatefulWidget {
-  const EditProfile({Key? key}) : super(key: key);
+class Profile extends StatefulWidget {
+  const Profile({Key? key}) : super(key: key);
 
   @override
-  State<EditProfile> createState() => _EditProfileState();
+  State<Profile> createState() => _ProfileState();
 }
 
-class _EditProfileState extends State<EditProfile> {
+class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -31,7 +31,7 @@ class _EditProfileState extends State<EditProfile> {
           Align(
             alignment: Alignment.centerLeft,
             child: Padding(
-                padding: EdgeInsets.fromLTRB(20, 5, 5, 0),
+                padding: EdgeInsets.fromLTRB(20, 5, 5, 1),
                 child: Text(
                   'Nama',
                   style: TextStyle(fontSize: 15),
@@ -41,7 +41,7 @@ class _EditProfileState extends State<EditProfile> {
             padding: EdgeInsets.all(15),
             child: TextField(
               decoration: InputDecoration(
-                suffixIcon: Icon(Icons.person),
+                // suffixIcon: Icon(Icons.person),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20.0),
                 ),
@@ -51,7 +51,7 @@ class _EditProfileState extends State<EditProfile> {
           Align(
             alignment: Alignment.centerLeft,
             child: Padding(
-                padding: EdgeInsets.fromLTRB(20, 5, 5, 0),
+                padding: EdgeInsets.fromLTRB(20, 5, 5, 1),
                 child: Text(
                   'Email',
                   style: TextStyle(fontSize: 15),
@@ -61,7 +61,7 @@ class _EditProfileState extends State<EditProfile> {
             padding: EdgeInsets.all(15),
             child: TextField(
               decoration: InputDecoration(
-                suffixIcon: Icon(Icons.email),
+                // suffixIcon: Icon(Icons.email),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20.0),
                 ),
@@ -71,7 +71,7 @@ class _EditProfileState extends State<EditProfile> {
           Align(
             alignment: Alignment.centerLeft,
             child: Padding(
-                padding: EdgeInsets.fromLTRB(20, 5, 5, 0),
+                padding: EdgeInsets.fromLTRB(20, 5, 5, 1),
                 child: Text(
                   'Password',
                   style: TextStyle(fontSize: 15),
@@ -81,7 +81,7 @@ class _EditProfileState extends State<EditProfile> {
             padding: EdgeInsets.all(15),
             child: TextField(
               decoration: InputDecoration(
-                suffixIcon: Icon(Icons.password),
+                // suffixIcon: Icon(Icons.password),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20.0),
                 ),
@@ -91,7 +91,7 @@ class _EditProfileState extends State<EditProfile> {
           Align(
             alignment: Alignment.centerLeft,
             child: Padding(
-                padding: EdgeInsets.fromLTRB(20, 5, 5, 0),
+                padding: EdgeInsets.fromLTRB(20, 5, 5, 1),
                 child: Text(
                   'Address',
                   style: TextStyle(fontSize: 15),
@@ -101,7 +101,7 @@ class _EditProfileState extends State<EditProfile> {
             padding: EdgeInsets.all(15),
             child: TextField(
               decoration: InputDecoration(
-                suffixIcon: Icon(Icons.location_on),
+                // suffixIcon: Icon(Icons.location_on),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20.0),
                 ),
@@ -121,10 +121,10 @@ class _EditProfileState extends State<EditProfile> {
               ),
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => HomePage()));
+                    MaterialPageRoute(builder: (context) => EditProfile()));
               },
               child: Text(
-                'Save',
+                'Edit',
                 style: TextStyle(
                     fontSize: 15,
                     color: Colors.white,

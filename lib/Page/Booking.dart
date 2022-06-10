@@ -1,15 +1,15 @@
-import 'package:e_futsal/header_top_style.dart';
-import 'package:e_futsal/login.dart';
+import 'dart:developer';
+import 'package:e_futsal/Widget/Header_Top.dart';
+import 'package:e_futsal/Page/Login.dart';
 import 'package:flutter/material.dart';
 
-class Register extends StatefulWidget {
-  const Register({Key? key}) : super(key: key);
+class Booking extends StatefulWidget {
 
   @override
-  State<Register> createState() => _RegisterState();
+  State<Booking> createState() => _BookState();
 }
 
-class _RegisterState extends State<Register> {
+class _BookState extends State<Booking> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -23,7 +23,7 @@ class _RegisterState extends State<Register> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               HeaderTop(
-                text: 'REGISTER',
+                text: 'TRANSACTION',
               ),
               // Container(
               //   width: width,
@@ -47,14 +47,14 @@ class _RegisterState extends State<Register> {
               //   ),
               // ),
               SizedBox(
-                height: 30.0,
+                height: 15.0,
               ),
               Align(
                 alignment: Alignment.centerLeft,
                 child: Padding(
                     padding: EdgeInsets.fromLTRB(20, 5, 5, 0),
                     child: Text(
-                      'Nama',
+                      'Id',
                       style: TextStyle(fontSize: 15),
                     )),
               ),
@@ -62,7 +62,7 @@ class _RegisterState extends State<Register> {
                 padding: EdgeInsets.all(15),
                 child: TextField(
                   decoration: InputDecoration(
-                    suffixIcon: Icon(Icons.person),
+                    suffixIcon: Icon(Icons.arrow_drop_down_circle),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20.0),
                     ),
@@ -83,7 +83,7 @@ class _RegisterState extends State<Register> {
                 child: Padding(
                     padding: EdgeInsets.fromLTRB(20, 5, 5, 0),
                     child: Text(
-                      'Email',
+                      'Area',
                       style: TextStyle(fontSize: 15),
                     )),
               ),
@@ -91,7 +91,7 @@ class _RegisterState extends State<Register> {
                 padding: EdgeInsets.all(15),
                 child: TextField(
                   decoration: InputDecoration(
-                    suffixIcon: Icon(Icons.email),
+                    suffixIcon: Icon(Icons.arrow_drop_down_circle),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20.0),
                     ),
@@ -113,7 +113,7 @@ class _RegisterState extends State<Register> {
                 child: Padding(
                     padding: EdgeInsets.fromLTRB(20, 5, 5, 0),
                     child: Text(
-                      'Password',
+                      'Bukti Transfer',
                       style: TextStyle(fontSize: 15),
                     )),
               ),
@@ -121,7 +121,7 @@ class _RegisterState extends State<Register> {
                 padding: EdgeInsets.all(15),
                 child: TextField(
                   decoration: InputDecoration(
-                    suffixIcon: Icon(Icons.visibility_off),
+                    suffixIcon: Icon(Icons.arrow_drop_down_circle),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20.0),
                     ),
@@ -143,7 +143,7 @@ class _RegisterState extends State<Register> {
                 child: Padding(
                     padding: EdgeInsets.fromLTRB(20, 5, 5, 0),
                     child: Text(
-                      'Confirm Password',
+                      'Tanggal',
                       style: TextStyle(fontSize: 15),
                     )),
               ),
@@ -151,7 +151,47 @@ class _RegisterState extends State<Register> {
                 padding: EdgeInsets.all(15),
                 child: TextField(
                   decoration: InputDecoration(
-                    suffixIcon: Icon(Icons.visibility_off),
+                    suffixIcon: Icon(Icons.arrow_drop_down_circle),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                  ),
+                ),
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                    padding: EdgeInsets.fromLTRB(20, 5, 5, 0),
+                    child: Text(
+                      'Jam',
+                      style: TextStyle(fontSize: 15),
+                    )),
+              ),
+              Padding(
+                padding: EdgeInsets.all(15),
+                child: TextField(
+                  decoration: InputDecoration(
+                    suffixIcon: Icon(Icons.person),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                  ),
+                ),
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                    padding: EdgeInsets.fromLTRB(20, 5, 5, 0),
+                    child: Text(
+                      'Status',
+                      style: TextStyle(fontSize: 15),
+                    )),
+              ),
+              Padding(
+                padding: EdgeInsets.all(15),
+                child: TextField(
+                  decoration: InputDecoration(
+                    suffixIcon: Icon(Icons.arrow_drop_down_circle),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20.0),
                     ),
@@ -203,7 +243,7 @@ class _RegisterState extends State<Register> {
                         MaterialPageRoute(builder: (context) => Login()));
                   },
                   child: Text(
-                    'Sign Up',
+                    'Pay NOW',
                     style: TextStyle(
                         fontSize: 15,
                         color: Colors.white,
@@ -213,20 +253,20 @@ class _RegisterState extends State<Register> {
               ),
 
               SizedBox(height: 20.0),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Login()));
-                },
-                child: Text.rich(
-                  TextSpan(text: 'Already have account?', children: [
-                    TextSpan(
-                      text: 'Log In',
-                      style: TextStyle(color: Color(0xff7CB342)),
-                    ),
-                  ]),
-                ),
-              ),
+              // GestureDetector(
+              //   onTap: () {
+              //     Navigator.push(context,
+              //         MaterialPageRoute(builder: (context) => Login()));
+              //   },
+              //   child: Text.rich(
+              //     TextSpan(text: 'Already have account?', children: [
+              //       TextSpan(
+              //         text: 'Log In',
+              //         style: TextStyle(color: Color(0xff7CB342)),
+              //       ),
+              //     ]),
+              //   ),
+              // ),
             ],
           ),
         ),

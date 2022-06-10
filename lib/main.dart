@@ -1,6 +1,5 @@
-import 'package:e_futsal/splash_screen.dart';
+import 'package:e_futsal/Page/SplashScreen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter/services.dart';
 
 void main() => runApp(MyApp());

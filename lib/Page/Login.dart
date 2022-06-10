@@ -1,6 +1,6 @@
-import 'package:e_futsal/header_top_style.dart';
-import 'package:e_futsal/home.dart';
-import 'package:e_futsal/register.dart';
+import 'package:e_futsal/Widget/Header_Top.dart';
+import 'package:e_futsal/Page/Home.dart';
+import 'package:e_futsal/Page/Register.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
@@ -29,6 +29,8 @@ class _LoginState extends State<Login> {
               SizedBox(
                 height: 30.0,
               ),
+
+              // Login
               Align(
                   alignment: Alignment.centerLeft,
                   child: Padding(
@@ -38,9 +40,7 @@ class _LoginState extends State<Login> {
                       style: TextStyle(fontSize: 15),
                     ),
                   )),
-              // SizedBox(
-              //   height: 0.5,
-              // ),
+              
               Padding(
                 padding: const EdgeInsets.all(15),
                 child: TextField(
@@ -55,6 +55,8 @@ class _LoginState extends State<Login> {
               SizedBox(
                 height: 20.0,
               ),
+
+              //Password
               Align(
                   alignment: Alignment.centerLeft,
                   child: Padding(
@@ -75,16 +77,7 @@ class _LoginState extends State<Login> {
                   ),
                 ),
               ),
-              // TextField(
-              //   obscureText: true,
-              //   decoration: InputDecoration(
-              //     hintText: '',
-              //     suffixIcon: Icon(Icons.visibility_off),
-              //     border: OutlineInputBorder(
-              //       borderRadius: BorderRadius.circular(20.0),
-              //     ),
-              //   ),
-              // ),
+              
               SizedBox(
                 height: 30.0,
               ),

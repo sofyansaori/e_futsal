@@ -1,14 +1,15 @@
-import 'package:e_futsal/header_top_style.dart';
-import 'package:e_futsal/login.dart';
+import 'package:e_futsal/Widget/Header_Top.dart';
+import 'package:e_futsal/Page/Login.dart';
 import 'package:flutter/material.dart';
 
-class Booking extends StatefulWidget {
+class Register extends StatefulWidget {
+  const Register({Key? key}) : super(key: key);
 
   @override
-  State<Booking> createState() => _BookState();
+  State<Register> createState() => _RegisterState();
 }
 
-class _BookState extends State<Booking> {
+class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -22,7 +23,7 @@ class _BookState extends State<Booking> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               HeaderTop(
-                text: 'TRANSACTION',
+                text: 'REGISTER',
               ),
               // Container(
               //   width: width,
@@ -46,14 +47,14 @@ class _BookState extends State<Booking> {
               //   ),
               // ),
               SizedBox(
-                height: 15.0,
+                height: 30.0,
               ),
               Align(
                 alignment: Alignment.centerLeft,
                 child: Padding(
                     padding: EdgeInsets.fromLTRB(20, 5, 5, 0),
                     child: Text(
-                      'Fields',
+                      'Nama',
                       style: TextStyle(fontSize: 15),
                     )),
               ),
@@ -61,7 +62,7 @@ class _BookState extends State<Booking> {
                 padding: EdgeInsets.all(15),
                 child: TextField(
                   decoration: InputDecoration(
-                    suffixIcon: Icon(Icons.arrow_drop_down_circle),
+                    suffixIcon: Icon(Icons.person),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20.0),
                     ),
@@ -82,7 +83,7 @@ class _BookState extends State<Booking> {
                 child: Padding(
                     padding: EdgeInsets.fromLTRB(20, 5, 5, 0),
                     child: Text(
-                      'Duration',
+                      'Email',
                       style: TextStyle(fontSize: 15),
                     )),
               ),
@@ -90,7 +91,7 @@ class _BookState extends State<Booking> {
                 padding: EdgeInsets.all(15),
                 child: TextField(
                   decoration: InputDecoration(
-                    suffixIcon: Icon(Icons.arrow_drop_down_circle),
+                    suffixIcon: Icon(Icons.email),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20.0),
                     ),
@@ -112,7 +113,7 @@ class _BookState extends State<Booking> {
                 child: Padding(
                     padding: EdgeInsets.fromLTRB(20, 5, 5, 0),
                     child: Text(
-                      'Time',
+                      'Password',
                       style: TextStyle(fontSize: 15),
                     )),
               ),
@@ -120,7 +121,7 @@ class _BookState extends State<Booking> {
                 padding: EdgeInsets.all(15),
                 child: TextField(
                   decoration: InputDecoration(
-                    suffixIcon: Icon(Icons.arrow_drop_down_circle),
+                    suffixIcon: Icon(Icons.visibility_off),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20.0),
                     ),
@@ -142,7 +143,7 @@ class _BookState extends State<Booking> {
                 child: Padding(
                     padding: EdgeInsets.fromLTRB(20, 5, 5, 0),
                     child: Text(
-                      'Id Booking',
+                      'Confirm Password',
                       style: TextStyle(fontSize: 15),
                     )),
               ),
@@ -150,47 +151,7 @@ class _BookState extends State<Booking> {
                 padding: EdgeInsets.all(15),
                 child: TextField(
                   decoration: InputDecoration(
-                    suffixIcon: Icon(Icons.arrow_drop_down_circle),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20.0),
-                    ),
-                  ),
-                ),
-              ),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Padding(
-                    padding: EdgeInsets.fromLTRB(20, 5, 5, 0),
-                    child: Text(
-                      'Name',
-                      style: TextStyle(fontSize: 15),
-                    )),
-              ),
-              Padding(
-                padding: EdgeInsets.all(15),
-                child: TextField(
-                  decoration: InputDecoration(
-                    suffixIcon: Icon(Icons.person),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20.0),
-                    ),
-                  ),
-                ),
-              ),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Padding(
-                    padding: EdgeInsets.fromLTRB(20, 5, 5, 0),
-                    child: Text(
-                      'Payment Method',
-                      style: TextStyle(fontSize: 15),
-                    )),
-              ),
-              Padding(
-                padding: EdgeInsets.all(15),
-                child: TextField(
-                  decoration: InputDecoration(
-                    suffixIcon: Icon(Icons.arrow_drop_down_circle),
+                    suffixIcon: Icon(Icons.visibility_off),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20.0),
                     ),
@@ -242,7 +203,7 @@ class _BookState extends State<Booking> {
                         MaterialPageRoute(builder: (context) => Login()));
                   },
                   child: Text(
-                    'Pay NOW',
+                    'Sign Up',
                     style: TextStyle(
                         fontSize: 15,
                         color: Colors.white,
@@ -252,20 +213,20 @@ class _BookState extends State<Booking> {
               ),
 
               SizedBox(height: 20.0),
-              // GestureDetector(
-              //   onTap: () {
-              //     Navigator.push(context,
-              //         MaterialPageRoute(builder: (context) => Login()));
-              //   },
-              //   child: Text.rich(
-              //     TextSpan(text: 'Already have account?', children: [
-              //       TextSpan(
-              //         text: 'Log In',
-              //         style: TextStyle(color: Color(0xff7CB342)),
-              //       ),
-              //     ]),
-              //   ),
-              // ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Login()));
+                },
+                child: Text.rich(
+                  TextSpan(text: 'Already have account?', children: [
+                    TextSpan(
+                      text: 'Log In',
+                      style: TextStyle(color: Color(0xff7CB342)),
+                    ),
+                  ]),
+                ),
+              ),
             ],
           ),
         ),
